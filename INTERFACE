@@ -1,0 +1,19 @@
+class Bird {
+    void eat() {
+        System.out.println("This bird eats food.");
+    }
+}
+
+class Peacock extends Bird {
+    void bark() {
+        System.out.println("peacock make sound.");
+    }
+}
+
+public class Inheritance {
+    public static void main(String[] args) {
+        Peacock mypeacock = new  Peacock();
+      mypeacock.eat();
+        mypeacock.bark();
+    }
+}
