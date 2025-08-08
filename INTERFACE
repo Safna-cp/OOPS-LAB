@@ -1,0 +1,56 @@
+interface Shape {
+    void display();
+}
+
+interface TwoDim extends Shape {
+    double area();
+}
+
+interface ThreeDim extends Shape {
+    double volume();
+}
+
+class Circle implements TwoDim {
+    double radius;
+
+    Circle(double r) {
+        radius = r;
+    }
+
+    public void display() {
+        System.out.println("This is a 2D Circle");
+    }
+
+    public double area() {
+        return Math.PI * radius * radius;
+    }
+}
+ 
+class Sphere implements ThreeDim {
+    double radius;
+
+    Sphere(double r) {
+        radius = r;
+    }
+
+    public void display() {
+        System.out.println("This is a 3D Sphere");
+    }
+
+    public double volume() {
+        return (4.0 / 3.0) * Math.PI * radius * radius * radius;
+    }
+}
+public class Interface {
+	public static void main(String[] args) {
+        Circle c = new Circle(5);
+        c.display();
+        System.out.println("Area of Circle: " + c.area());
+
+        System.out.println();
+
+        Sphere s = new Sphere(5);
+        s.display();
+        System.out.println("Volume of Sphere: " + s.volume());
+    }
+}
