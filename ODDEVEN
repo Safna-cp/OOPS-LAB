@@ -1,0 +1,34 @@
+public class Oddeven {
+	  public static void main(String[] args) {
+	        int[] arr = { -3, 0, 4, 5, -1, 8, 0, -2 };
+
+	        int oddCount = 0;
+	        int evenCount = 0;
+	        int positiveCount = 0;
+	        int negativeCount = 0;
+	        int zeroCount = 0;
+	        for (int num : arr) {
+	            if (num == 0) {
+	                zeroCount++;
+	            } else {
+	                if (num > 0) {
+	                    positiveCount++;
+	                } else {
+	                    negativeCount++;
+	                }
+	                if (num % 2 == 0) {
+	                    evenCount++;
+	                } else {
+	                    oddCount++;
+	                }
+	            }
+	        }
+
+	        System.out.println("Odd numbers: " + oddCount);
+	        System.out.println("Even numbers: " + evenCount);
+	        System.out.println("Positive numbers: " + positiveCount);
+	        System.out.println("Negative numbers: " + negativeCount);
+	        System.out.println("Zeros: " + zeroCount);
+	    }
+
+}
